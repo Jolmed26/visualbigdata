@@ -37,7 +37,7 @@ Del análisis exploratorio de datos se obtienen las siguientes tablas que result
 
 # Conclusiones 📝
 
-Este análisis fue particularmente desafiante debido al desequilibrio en el conjunto de datos y la cantidad limitada de etiquetas disponibles. Sin embargo, al consolidar los datos en dos clases alta calidad y baja calidad pudimos predecir con un __87%__ de precisión la calidad del vino, asegurando resultados más equilibrados y confiables.
+Este análisis fue particularmente desafiante debido a que los datos estaban desbalanceados. Sin embargo, al consolidar los datos en dos clases alta calidad y baja calidad pudimos predecir con un __87%__ de precisión la calidad del vino, asegurando resultados más equilibrados y confiables.
 
 # Setup and Run ⚙️
 

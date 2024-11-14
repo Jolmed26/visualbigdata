@@ -1,5 +1,11 @@
 # Carpeta con archivos de código 💻
 
-El Jupyter Notebook de esta carpeta sigue el esquema de análisis EDA, y este es un proceso iterativo, así que se actualizará constantemente a medida que se determinen metodologías más adecuadas para el análisis de este trabajo, se pretende revisar el tratamiento de datos núlos ya que se utilizó un enfoque subjetivo.
+Esta carpeta contiene los Jupyter Notebooks de cada uno de los ejercicios realizados.  
 
-Este trabajo pertenece a la tesis __Predicción de Rotación de Personal en Empresas Manufactureras de Tala, Jalisco__ y su propósito es meramente académico. 
+ __Challenges__ incluye los 3 challenges, analisis exploratorio, modelos de Spark ML y Modelos complejos de Spark ML.
+
+ __Noteboos__ incluye todos los notebooks de ejercicios realizados durante el semestre.
+
+Este trabajo pertenece a la ___*materia de Visualización de Grandes Bases de Datos*___ y su propósito es meramente académico. 
+
+Para mayor detalles e información consultar cada carpeta.

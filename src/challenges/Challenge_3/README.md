@@ -66,4 +66,4 @@ For more details check de documentation folder.
 
 # Get data 📥
 
-Data is available [here](results)
+Data is available [here](visualbigdata/results/)

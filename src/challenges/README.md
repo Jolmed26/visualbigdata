@@ -1,6 +1,6 @@
 # Carpeta con Challenges 📁
 
-Esta carpeta contiene los Jupyter Notebooks de cada uno de los ejercicios realizados.  
+Esta carpeta contiene los Jupyter Notebooks de cada challenge realizado.  
 
  __Challenges_1:__ Challenge Básico: Global Terrorism 🌍
 

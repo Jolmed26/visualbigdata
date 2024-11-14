@@ -63,3 +63,7 @@ $ pip install pyspark==3.5.3
 </details> 
 
 For more details check de documentation folder.
+
+# Get data 📥
+
+Data is available [here](results)

@@ -48,10 +48,12 @@ Python version 3.11.5
 $ pip install folium==0.18.0
 $ pip install pyspark==3.5.3
 $ pip install matplotlib==3.8.0
-$ pip install seaborn==0.13.2
-
-  
+$ pip install seaborn==0.13.2 
 ```
-</details> 
 
-For more details check de documentation folder.
+# Get data 📥
+
+Data is available [here](https://archive.ics.uci.edu/ml/datasets/Wine+Quality)
+
+
+</details>For more details check de documentation folder.

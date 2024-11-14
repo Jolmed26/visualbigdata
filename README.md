@@ -1,30 +1,87 @@
-# Visualización de grandes bases de datos 2024-B
+# Visualización de Grandes Bases de Datos 2024-B
 ## Jose Luis Medrano Medrano
 ## 210674077
 
-# Predicción de Rotación de Personal en Empresas Manufactureras de Tala, Jalisco 📊
+# [Challenge 1 Básico: Global Terrorism 🌍](src/challenges/Challenge_1)
 
-En este repositorio se pretende desarrollar un modelo predictivo para la rotación de personal para empresas manufacturereras.
+Se realizó un análisis exploratorio de un dataset de terrorismo global usando pyspak. 
 
-# Abstract 📝
+## Resultados 📝
 
-En México la industria manufacturera presenta un alto porcentaje de rotación de personal, esto tiene un fuerte impacto económico en las empresas y por ende en la economía del país, buscando atender esta problemática e identificando el hecho de que no existe literatura acerca de la predicción de rotación de personal en la industria manufacturera de Jalisco, esta investigación tiene como objetivo el desarrollo y evaluación de algoritmos predictivos supervisados aplicados a la rotación de personal. 
+### Top 5 de países con más incidentes 
 
-# Análisis exploratorio de datos (EDA) 🔍
-
-Al iniciar el análisis exploratorio de datos, la base de datos tenía 16 variables, 502 entradas y 948 valores nulos, luego del proceso de limpieza de datos se concluyó con 14 variables, 495 registros y 0 valores núlos.
-
-Se eliminaron las variables salario diario, ya que existe salario mensual y ambas aportan la misma información, y motivo de renuncia, que por su cantidad de valores faltantes y tratarse de texto abierto, su análisis va más allá del alcance de este estudio.
-
-También se generó una nueva variable edad usando la fecha de último registro y la fecha de nacimiento, ya que las fechas no pueden ser procesadas como parte del modelo y se eliminaron las variables motivo de renuncia, fecha de ingreso, fecha de último registro y fecha de nacimiento.
-
-Finalmente, la visualización de datos permitió determinar que los empleados auxiliares de almacén son los que tienen una mayor rotación de personal y el personal que rola turno suele trabajar menos de 100 días antes de abandonar la empresa y que no existe una diferencia significativa entre el abandono de trabajo y el género.
+| Country                       | Resultado |
+|-------------------------------|-----------|
+| Iraq                          | 24,636    |
+| Pakistan                      | 14,368    |
+| Afghanistan                   | 12,731    |
+| India                         | 11,960    |
+| Colombia                      | 11,960    |
 
 
+### Frecuencia de incidentes del 2012 al 2017
 
-# Validación de modelos predictivos usando Spark ML 🧠
+| Year             | Frequency          |
+|------------------|--------------------|
+| 2017             | 10,900             |
+| 2016             | 13,587             |
+| 2015             | 14,965             |
+| 2014             | 16,903             |
+| 2013             | 12,036             |
+| 2012             | 8,522              |
 
-Se aplicaron los modelos Logistic Regression, One vs Rest, Linear SVC, Naive Bayes, Random Forest Classifier, GBT Classifier y Multileyer Perceptron Classifier. Para poder aplicar dichos modelos se siguio el siguiente proceso:
+
+## Conclusiones 🔍
+
+A partir de este análisis exploratorio, podemos concluir que el tipo de ataque terrorista más común involucra explosiones. Esto probablemente se deba al amplio impacto y la relativa facilidad de ejecución de este tipo de ataques, los cuales tienden a ser tanto impactantes como eficientes en términos de alcance.
+
+Además, los países en el Medio Oriente son particularmente vulnerables a estos tipos de ataques, lo que resalta los desafíos geopolíticos y de seguridad que enfrenta esa región.
+
+
+# [Challenge 2 Intermedio: Spark Machine Learning Wine Quality 🍷](src/challenges/Challenge_2)
+
+Se realiza un modelo de Machine Learning usando Pyspark de un data set de calidad del vino.
+
+## Resultados 📝
+
+### Estadística descriptiva de algunas variables
+
+| Summary | Quality | Alcohol | Fixed Acidity | pH |
+|---------|---------|---------|---------------|-----|
+| Count   | 1599    | 1599    | 1599          | 1599 |
+| Mean    | 5.636   | 10.423  | 8.320         | 3.311 |
+| Stddev  | 0.808   | 1.066   | 1.741         | 0.154 |
+| Min     | 3       | 8.4     | 4.6           | 2.74 |
+| 25%     | 5       | 9.5     | 7.1           | 3.21 |
+| 50%     | 6       | 10.2    | 7.9           | 3.31 |
+| 75%     | 6       | 11.1    | 9.2           | 3.4  |
+| Max     | 8       | 14.9    | 15.9          | 4.01 |
+
+
+
+### Variable objetivo
+
+| Quality | Count |
+|---------|-------|
+| 6       | 638   |
+| 3       | 10    |
+| 5       | 681   |
+| 4       | 53    |
+| 8       | 18    |
+| 7       | 199   |
+
+
+
+## Conclusiones 🔍
+
+Este análisis fue particularmente desafiante debido a que los datos estaban desbalanceados. Sin embargo, al consolidar los datos en dos clases alta calidad y baja calidad pudimos predecir con un __87%__ de precisión la calidad del vino, asegurando resultados más equilibrados y confiables.
+
+
+# [Challenge 3 Avanzado: Predicción de Rotación de Personal usando Spark ML 📊](src/challenges/Challenge_3)
+
+Se aplicaron los modelos Logistic Regression, One vs Rest, Linear SVC, Naive Bayes, Random Forest Classifier, GBT Classifier y Multileyer Perceptron Classifier para predecir la rotación de personal.
+
+## Proceso de validación de modelos predictivos usando Spark ML 🧠
 
 1. Se dividieron las variables categóricas y numéricas.
 2. Se trataron los valores atípicos.
@@ -33,6 +90,8 @@ Se aplicaron los modelos Logistic Regression, One vs Rest, Linear SVC, Naive Bay
 5. Se transformaron los datos ya vectorizados.
 6. Se validó que no existieran valores negativos y de haberlos se reescalaron.
 7. Se procesaron los datos en el modelo
+
+## Resultados 📝
 
 ### Resumen de Resultados de Modelos
 
@@ -58,28 +117,36 @@ Se aplicaron los modelos Logistic Regression, One vs Rest, Linear SVC, Naive Bay
 | GENERO           | 0.03754070204325816|
 | TURNO            | 0.0                |
 
+## Conclusiones 🔍
+
+Los resultados de este análisis son positivos ya que se logró predecir con un __87.5%__ de precisión la rotación de personal, usando 7 variables con las que la mayoría de empresas de la industria manufacturera cuentan.
 
 # Estructura de repositorio 🗂️
     
-    ├── data                            <- Base de datos original.  
-    |    |── README.md                  <- Descripción general del contenido del directorio.
-    |    └── rotacion_personal.xlsx     <- Base de datos.  
+    ├── data                                <- Base de datos original.  
+    |    |── ejercicios_avanzados           <- directorio con files de datos
+    |    |── ejercicios_basicos             <- directorio con carpetas de multiples datos
+    |    └── README.md                      <- Descripción general del contenido del directorio.
     |      
-    ├── doc                             <- Archivos de texto.
-    |    └──  README.md                 <- Problema, objetivo y justificación del proyecto.
+    ├── doc                                 <- Archivos de texto.
+    |    └──  README.md                     <- Problema, objetivo y justificación del proyecto.
     |
-    ├── results                         <- Base de datos limpia y analizada.  
-    |    └──  README.md                 <- Resultados escritos del análisis EDA.
+    ├── results                             <- Base de datos limpia y analizada.  
+    |    |── mapa_terrorismo.html           <- Resultado de challenge terrorismo
+    |    |── rotacion_personal_clean.csv    <- Data frame previamente tratado para challenge 3
+    |    |── ApacheSpark_JoseMedrano.pdf    <- Certificado de curso de Apache Spark
+    |    └── README.md                      <- Resultados escritos del análisis EDA.
     |  
-    ├── src                             <- archivos de código.    
-    |    |── EDA.ipynb                  <- Archivo de código con análisis EDA.
-    |    └── README.md                  <- Descripción general del contenido del directorio.
+    ├── src                                 <- archivos de código.    
+    |    |── challenges                     <- directorio con challenges
+    |    |── notebooks                      <- directorio con notebooks de ejercicios
+    |    └── README.md                      <- Descripción general del contenido del directorio.
     |  
-    ├── CITATION.md                     <- Cómo citar el proyecto.  
+    ├── CITATION.md                         <- Cómo citar el proyecto.  
     |  
-    ├── CONTRIBUTING.md                 <- Pasos para contribuir al proyecto.  
+    ├── CONTRIBUTING.md                     <- Pasos para contribuir al proyecto.  
     |   
-    ├── LICENSE                         <- MIT License.  
+    ├── LICENSE                             <- MIT License.  
     |  
-    ├── README.md                       <- Readme file principal con la descripción del proyecto.  
+    ├── README.md                           <- Readme file principal con la descripción del proyecto.  
    

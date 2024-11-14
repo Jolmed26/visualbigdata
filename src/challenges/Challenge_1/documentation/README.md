@@ -5,10 +5,11 @@ To perform a descriptive analysis you have to follow the nexst steps:
 #### 1. Import required libraries
 
 ```shell
-$ pip install folium==0.18.0
-$ pip install pyspark==3.5.3
-$ pip install matplotlib==3.8.0
-$ pip install seaborn==0.13.2
+import folium
+from folium import plugins
+import pyspark.pandas as ps
+import matplotlib.pyplot as plt
+import seaborn as sns
 ```
 
 #### 2. Data check

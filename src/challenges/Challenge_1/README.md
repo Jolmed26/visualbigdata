@@ -49,6 +49,11 @@ $ pip install seaborn==0.13.2
 
   
 ```
-</details> 
 
-For more details check de documentation folder.
+
+# Get data 📥
+
+Data is available [here](https://www.kaggle.com/datasets/START-UMD/gtd)
+
+</details>For more details check de documentation folder.
+
